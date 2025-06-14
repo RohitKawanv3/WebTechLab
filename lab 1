@@ -1,0 +1,657 @@
+1. Create a web page that contains both text level formatting and block level formatting.
+- For text level formatting the page should contain the paragraph that include bold,
+italic and underline texts.
+- For block level formatting the page should contain the two <div> with different
+background color
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Block Level Formatting</title>
+    <style>
+        .block1 {
+            background-color: lightblue;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .block2 {
+            background-color: lightgreen;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Example of Text and Block Level Formatting</h1>
+
+    <p>
+        This is a paragraph with <b>bold</b> text, <i>italic</i> text, and <u>underlined</u> text.
+    </p>
+
+    <div class="block1">
+        <h2>Block 1</h2>
+        <p>This is the first block-level element with a light blue background.</p>
+    </div>
+
+    <div class="block2">
+        <h2>Block 2</h2>
+        <p>This is the second block-level element with a light green background.</p>
+    </div>
+
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+2. Create a webpage that contains
+- An ordered list of 5 fruits
+- An unordered list of 5 vegetables
+- A description list containing description of 3 different Cars
+- A hyperlinked text that redirects to a any page available online
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists and Link Example</title>
+</head>
+<body>
+
+    <h1>Fruits, Vegetables, Cars and a Link</h1>
+
+    <h2>Ordered List of Fruits</h2>
+    <ol>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Mango</li>
+        <li>Pineapple</li>
+    </ol>
+
+    <h2>Unordered List of Vegetables</h2>
+    <ul>
+        <li>Carrot</li>
+        <li>Broccoli</li>
+        <li>Spinach</li>
+        <li>Potato</li>
+        <li>Tomato</li>
+    </ul>
+
+    <h2>Description List of Cars</h2>
+    <dl>
+        <dt>Tesla Model S</dt>
+        <dd>An all-electric sedan with long range and high performance.</dd>
+        <dt>Ford Mustang</dt>
+        <dd>A classic American muscle car known for its power and design.</dd>
+        <dt>Toyota Corolla</dt>
+        <dd>A reliable and fuel-efficient compact car popular worldwide.</dd>
+    </dl>
+
+    <p>
+        Click here to visit <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>.
+    </p>
+
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------
+3. Create a webpage that contains
+- An image of car with height 120px, width 120px and alternative text for image “Cars”
+- Any image that contain client side imagemap that redirects to any page available
+online.
+- Any image that returns the coordinates of the clicked area to URL (use server side
+imagemap)
+
+
+-------------------------------------------------------------------------------------------------------------------
+4. Create a webpage that contains
+- A striped table containing information of 5 Students. The table must contain the roll
+no, name, address and contact number of students. The content of the first row must
+be horizontally aligned right, third must be aligned left and fifth must be aligned
+center. Also , the content of the second row must be vertically aligned top and fourth
+row must be vertically aligned bottom
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Maps Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            
+        }
+        .note {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Maps Demonstration</h1>
+    
+    <!-- 1. Simple image with alt text -->
+    <div class="section">
+        <h2>1. Basic Image with Alt Text</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/55/55283.png" 
+             alt="Cars" 
+             width="120" 
+             height="120">
+        <p class="note">A car icon with height and width of 120px and alternative text "Cars".</p>
+    </div>
+    
+    <!-- 2. Client-side image map -->
+    <div class="section">
+        <h2>2. Client-Side Image Map (Redirects to pages)</h2>
+        <img src="https://www.w3schools.com/html/workplace.jpg" 
+             alt="Workplace" 
+             usemap="#workmap" height="120px">
+        
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" 
+                  href="https://www.wikipedia.org" target="_blank">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" 
+                  href="https://www.google.com" target="_blank">
+            <area shape="circle" coords="337,300,44" alt="Coffee" 
+                  href="https://www.amazon.com" target="_blank">
+        </map>
+        <p class="note">Click on the computer, phone, or coffee cup to visit different websites.</p>
+    </div>
+    
+    <!-- 3. Server-side image map -->
+    <div class="section">
+        <h2>3. Server-Side Image Map (Returns coordinates)</h2>
+        <p>Note: Server-side image maps require server processing. This is a demonstration of the HTML only.</p>
+        
+        <a href="/imagemap/process.cgi">
+            <img src="https://www.w3schools.com/html/planets.gif" 
+                 alt="Planets" 
+                 ismap>
+        </a>
+        <p class="note">When clicked, this sends the coordinates to the server. In a real implementation, clicking would send coordinates to a server-side script.</p>
+    </div>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------
+5. Design the following using HTML using the concept of nested frameset
+
+Frame1 should contain three links, the first should be opened in frame 2, second in frame 3
+and third in frame 4.
+
+NAGARNE YO
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+6. Create a webpage containing paragraph and an inline frame that loads any website.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Paragraph and Inline Frame</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .iframe-container {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Example Webpage with Inline Frame</h1>
+    
+    <p>
+        This webpage demonstrates how to embed an external website using an inline frame (iframe). 
+        Below you'll see an example of Wikipedia embedded within our page. 
+        Inline frames are useful when you want to display content from another source 
+        while keeping your own navigation and design intact.
+    </p>
+    
+    <p>
+        Note that some websites may prevent themselves from being embedded in iframes 
+        through X-Frame-Options or Content Security Policy headers. In such cases, 
+        the iframe will either display an error or appear blank.
+    </p>
+    
+    <div class="iframe-container">
+        <iframe src="https://en.wikipedia.org/wiki/Main_Page" 
+                title="Wikipedia, the free encyclopedia"
+                allow="fullscreen">
+            Your browser does not support iframes.
+        </iframe>
+    </div>
+    
+    <p>
+        The above iframe displays the Wikipedia homepage. You can interact with it 
+        just like you would on the actual Wikipedia website, but it remains contained 
+        within our webpage.
+    </p>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------
+
+7. Design a form in HTML using fieldset and legend that contains the following fields
+- Name as input type –text
+- Address as input type-text
+- A multiline text for Bio
+- A dropdown for address
+- A radio button for gender
+- A file input for identity upload
+- A password type input for contact number
+- A submit button that calls javascript function that confirms the user for form
+submission
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        fieldset {
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #4CAF50;
+            padding: 0 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .radio-group {
+            margin-top: 5px;
+        }
+        .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Information Form</h1>
+    
+    <form id="userForm" onsubmit="return confirmSubmission()">
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Tell us about yourself..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="district">District:</label>
+                <select id="district" name="district" required>
+                    <option value="">-- Select District --</option>
+                    <option value="kathmandu">Kathmandu</option>
+                    <option value="lalitpur">Lalitpur</option>
+                    <option value="bhaktapur">Bhaktapur</option>
+                    <option value="pokhara">Pokhara</option>
+                    <option value="chitwan">Chitwan</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Security Information</legend>
+            
+            <div class="form-group">
+                <label for="identity">Upload Identity Document:</label>
+                <input type="file" id="identity" name="identity" accept=".pdf,.jpg,.png" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="contact">Contact Number (Password field for demo):</label>
+                <input type="password" id="contact" name="contact" required>
+            </div>
+        </fieldset>
+        
+        <div class="form-group">
+            <input type="submit" value="Submit Form">
+        </div>
+    </form>
+
+    <script>
+        function confirmSubmission() {
+            // Get form values for confirmation message
+            const name = document.getElementById('name').value;
+            const district = document.getElementById('district').value;
+            
+            // Create confirmation message
+            let message = `Are you sure you want to submit this form?\n\n`;
+            message += `Name: ${name}\n`;
+            message += `District: ${district.charAt(0).toUpperCase() + district.slice(1)}\n\n`;
+            message += `Note: This is a demo. Form won't actually be submitted.`;
+            
+            // Show confirmation dialog
+            const isConfirmed = confirm(message);
+            
+            // Return true to submit or false to cancel
+            if (isConfirmed) {
+                alert("Form submitted successfully (demo)");
+                // In a real application, the form would submit here
+                // return true;
+            }
+            
+            // For this demo, always prevent actual submission
+            return false;
+        }
+    </script>
+</body>
+</html>
+-------------------------------------------------------------------------------------------------------------------
+8. Create a webpage that demonstrate the use of all three types of stylesheets(Inline,
+Internal and External)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Stylesheet Types Demonstration</title>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Internal Stylesheet -->
+    <style>
+        .internal-style {
+            background-color: #e6f7ff;
+            border: 2px solid #0066cc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        h2 {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: #ff6600; text-align: center;">CSS Stylesheet Types Demonstration</h1>
+    </header>
+    
+    
+        <!-- Inline Styles -->
+        <section style="background-color: #ffe6e6; border: 2px solid #ff0000; padding: 15px; margin: 20px 0; border-radius: 5px;">
+            <h2 style="color: #ff0000; font-style: italic;">Inline Styles</h2>
+            <p style="font-size: 16px; line-height: 1.5;">
+                This section is styled using <strong>inline CSS</strong> applied directly to HTML elements using the <code>style</code> attribute.
+                Inline styles have the highest specificity and will override internal and external styles.
+            </p>
+            
+        </section>
+        
+        <!-- Internal Styles -->
+        <section class="internal-style">
+            <h2>Internal Stylesheet</h2>
+            <p>
+                This section is styled using an <strong>internal stylesheet</strong> defined in the <code>&lt;style&gt;</code> tag within the <code>&lt;head&gt;</code> section of this document.
+            </p>
+            
+        </section>
+        
+        <!-- External Styles -->
+        <section class="external-style">
+            <h2>External Stylesheet</h2>
+            <p>
+                This section is styled using an <strong>external stylesheet</strong> linked in the <code>&lt;head&gt;</code> section of this document.
+            </p>
+            
+        </section>
+
+</body>
+</html>
+
+style.css 
+/* External Stylesheet */
+.external-style {
+    background-color: #e6ffe6;
+    border: 2px solid #009933;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.specificity-demo {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-top: 20px;
+    border-left: 4px solid #666;
+}
+
+#unique-paragraph {
+    color: red;
+    font-weight: bold;
+}
+
+.demo-paragraph {
+    color: blue;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    color: #666;
+}
+
+
+-------------------------------------------------------------------------------------------------------------------
+9. Create an webpage that demonstrates the use of all types of selectors in CSS.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* 1. Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* 2. Type/Element Selector */
+        body {
+            background-color: #f5f5f5;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        /* 3. Class Selector */
+        .highlight {
+            background-color: yellow;
+            padding: 2px;
+        }
+
+        /* 4. ID Selector */
+        #main-title {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        /* 5. Attribute Selector */
+        [target="_blank"] {
+            color: #e74c3c;
+        }
+
+        /* 6. Pseudo-class Selector */
+        a:hover {
+            text-decoration: none;
+        }
+
+        /* 7. Pseudo-element Selector */
+        p::first-letter {
+            font-size: 150%;
+            color: #8e44ad;
+        }
+
+        /* 8. Descendant Selector */
+        div span {
+            font-style: italic;
+        }
+
+        /* 9. Child Selector */
+        ul > li {
+            border-bottom: 1px dotted #ccc;
+        }
+
+        /* 10. Adjacent Sibling Selector */
+        h2 + p {
+            color: #3498db;
+        }
+
+        /* 11. General Sibling Selector */
+        h3 ~ p {
+            background-color: #eaf2f8;
+        }
+
+        /* 12. Grouping Selector */
+        h1, h2, h3 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">CSS Selectors Demonstration</h1>
+
+    <h2>1. Universal Selector</h2>
+    <p>Styles all elements on the page (used here for font and box-sizing).</p>
+
+    <h2>2. Type/Element Selector</h2>
+    <p>Styles all elements of a specific type (used here for body styling).</p>
+
+    <h2>3. Class Selector</h2>
+    <p>This paragraph has a <span class="highlight">highlighted section</span> using a class selector.</p>
+
+    <h2>4. ID Selector</h2>
+    <p>The page title above is styled using an ID selector.</p>
+
+    <h2>5. Attribute Selector</h2>
+    <p>This <a href="#" target="_blank">link</a> is red because it has target="_blank".</p>
+
+    <h2>6. Pseudo-class Selector</h2>
+    <p>Hover over <a href="#">this link</a> to see the hover effect (underline removed).</p>
+
+    
+</body>
+</html>
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
