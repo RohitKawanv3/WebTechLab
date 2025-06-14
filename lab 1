@@ -106,7 +106,78 @@ online.
 - Any image that returns the coordinates of the clicked area to URL (use server side
 imagemap)
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Maps Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .note {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Maps Demonstration</h1>
+    
+    <!-- 1. Simple image with alt text -->
+    <div class="section">
+        <h2>1. Basic Image with Alt Text</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/55/55283.png" 
+             alt="Cars" 
+             width="120" 
+             height="120">
+        <p class="note">A car icon with height and width of 120px and alternative text "Cars".</p>
+    </div>
+    
+    <!-- 2. Client-side image map -->
+    <div class="section">
+        <h2>2. Client-Side Image Map (Redirects to pages)</h2>
+        <img src="https://www.w3schools.com/html/workplace.jpg" 
+             alt="Workplace" 
+             usemap="#workmap">
+        
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" 
+                  href="https://www.wikipedia.org" target="_blank">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" 
+                  href="https://www.google.com" target="_blank">
+            <area shape="circle" coords="337,300,44" alt="Coffee" 
+                  href="https://www.amazon.com" target="_blank">
+        </map>
+        <p class="note">Click on the computer, phone, or coffee cup to visit different websites.</p>
+    </div>
+    
+    <!-- 3. Server-side image map -->
+    <div class="section">
+        <h2>3. Server-Side Image Map (Returns coordinates)</h2>
+        <p>Note: Server-side image maps require server processing. This is a demonstration of the HTML only.</p>
+        
+        <a href="/imagemap/process.cgi">
+            <img src="https://www.w3schools.com/html/planets.gif" 
+                 alt="Planets" 
+                 ismap>
+        </a>
+        <p class="note">When clicked, this sends the coordinates to the server. In a real implementation, clicking would send coordinates to a server-side script.</p>
+    </div>
+</body>
+</html>
 -------------------------------------------------------------------------------------------------------------------
 4. Create a webpage that contains
 - A striped table containing information of 5 Students. The table must contain the roll
@@ -186,18 +257,8 @@ row must be vertically aligned bottom
 </html>
 
 -------------------------------------------------------------------------------------------------------------------
-5. Design the following using HTML using the concept of nested frameset
 
-Frame1 should contain three links, the first should be opened in frame 2, second in frame 3
-and third in frame 4.
-
-NAGARNE YO
-
-
-
--------------------------------------------------------------------------------------------------------------------
-
-6. Create a webpage containing paragraph and an inline frame that loads any website.
+5. Create a webpage containing paragraph and an inline frame that loads any website.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -269,7 +330,7 @@ NAGARNE YO
 
 -------------------------------------------------------------------------------------------------------------------
 
-7. Design a form in HTML using fieldset and legend that contains the following fields
+6. Design a form in HTML using fieldset and legend that contains the following fields
 - Name as input type –text
 - Address as input type-text
 - A multiline text for Bio
@@ -448,7 +509,7 @@ submission
 </body>
 </html>
 -------------------------------------------------------------------------------------------------------------------
-8. Create a webpage that demonstrate the use of all three types of stylesheets(Inline,
+7. Create a webpage that demonstrate the use of all three types of stylesheets(Inline,
 Internal and External)
 
 <!DOCTYPE html>
@@ -548,7 +609,7 @@ footer {
 
 
 -------------------------------------------------------------------------------------------------------------------
-9. Create an webpage that demonstrates the use of all types of selectors in CSS.
+8. Create an webpage that demonstrates the use of all types of selectors in CSS.
 
 <!DOCTYPE html>
 <html lang="en">
